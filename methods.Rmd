@@ -1,0 +1,83 @@
+---
+title             : "Automation In Daily Life"
+shorttitle        : "Automation"
+
+author: 
+  - name          : "Rushabh Barbhaya"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "326 Market St, Harrisburg, PA 17101"
+    email         : "RBarbhaya@my.harrisburgu.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Harrisburg University of Science and Technology"
+
+authornote: |
+  This paper is a for the Harrisurg University of Science and Technology's graduate course of Analytics (GRAD 695). This paper uses real research for generating an output. All the research done by this paper can be reproduced and cited.
+
+abstract: |
+  PlaceHolder
+  
+keywords          : "Automation, Jobs, Aviation, Self Driving Cars, Engineering, Science, Production, Agriculture, Robots, Finance, Monte Carlo"
+wordcount         : "11"
+
+bibliography      : ["C:/Users/rhbar/Documents/ref.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+csl               : "C:/Users/rhbar/Documents/apa.csl"
+documentclass     : "apa7"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("C:/Users/rhbar/Documents/ref.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Method
+Using the data provided by the United States Bureau Of Labor Statistics (@u.s.). The data is sliced by year and industrial section. US Bureau of Labor Statistics houses data in multiple formats, using simple flat files for this analysis. US Bureau of Labor Statistics also provides with data key to decode the column names. Similarly, safety data is also obtained from government agencies. IATA @iata provides a safety report across years for this analysis. Department of Transportation provides road safety reports. Data will be combined from official government-managed websites and other sources that confirm when automation was implemented in that industry. For example, Auto-Pilot was invented in 1912 @windsor1913popular with its initial implementation in 1970 following the Lunar Landing Module @widnall1971lunar. \
+Following the results from these sections, the results are trend analyzed and extrapolated to the finance industry to conclude the suggested hypothesis.
+
+## Participants
+Absolute numbers from the statistics reports as the participants in this analysis. These reports are ranged from 1930 to 2020. The key column in this report being the unemployment rate across industries and safety reports. \
+The reports and articles from multiple sources will be utilized to check if a robotic process resulted in a loss of jobs and loss of lives. Or was it the loss of lives and loss of jobs that gave rise to robots?
+
+## Procedures
+The first step in this analysis is to clean, treat outliers and normalize the data. Cleaning the data entails checking for any formatting issues, removing or excluding any unwanted data that impacts the speed of execution. A correctly formatting the data to the correct data type that is used in the analysis. Converting percent to 0-1 normalized values. \
+Outliers are subjective. Outliers affect the final results of the analysis. Outliers may skew the results in any direction; therefore, it becomes essential to identify and treat them accordingly. \
+It is essential to normalize data that spans multiple years to a joint base. Treating safety reports and employment records to parts per thousand is the first step before any analysis is performed. This makes comparison on equal terms. \
+Following these steps, z-test, and analysis of variance to conclude the proposed hypothesis. \
+
+## Measures
+For the hypothesis tests, the confidence interval is set at 90% as there are for almost a century which may result in a more significant change. The measure of success is calculated on p-values from the hypothesis testing with an acceptable p-value of less than or equal to 0.01 and significant variables from the analysis. \
+These results are weighted and applied to the finance industry, which is the basis for this research. The weighing factor is ranged from 0 to 1 and is fed to a Monte Carlo series to account for any random error which may occur. 
+
+## Analysis
+The overall mean from the Monte Carlo simulation results is compared with the trends in technology, aviation, manufacturing, and agriculture industries. This result will not only give the current position on the automation trend but also give an estimate. Estimation of how long it would take for robots to be accepted in this industry. Monte Carlo series helps normalize and accounts for any random error that may occur. \
+R (@R-base) is used to extract all the results, except the Monte Carlo simulation. Monte Carlo simulation is performed by python (@python.org). 
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup

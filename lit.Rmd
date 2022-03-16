@@ -1,0 +1,102 @@
+---
+title             : "Automation In Daily Life"
+shorttitle        : "Automation"
+
+author: 
+  - name          : "Rushabh Barbhaya"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "326 Market St, Harrisburg, PA 17101"
+    email         : "RBarbhaya@my.harrisburgu.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Harrisburg University of Science and Technology"
+
+authornote: |
+  This paper is for the Harrisburg University of Science and Technology's graduate course of Analytics (GRAD 695). This paper uses actual research for generating output. All the research done by this paper can is reproducible. This document is for the internal use of Harrisburg University of Science and Technology and should not be used as a reference in professional study and research.
+
+abstract: |
+  PlaceHolder
+  
+keywords          : "Automation, Jobs, Aviation, Self Driving Cars, Engineering, Science, Production"
+wordcount         : "7"
+
+bibliography      : ["C:/Users/rhbar/Documents/ref.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+csl               : "C:/Users/rhbar/Documents/apa.csl"
+documentclass     : "apa7"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("C:/Users/rhbar/Documents/ref.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Artificial Intelligence, Machine Learning, Robots, Automation usually form the news as the cause for mass layoffs, for example, @mackie_2021. Author @PaulKMcclure2018 has similarly observed a correlation between the rise of mainstay automated solutions and growing health concerns. The analysis was not on the level and type of job. This concern for technology replacing jobs has been known and documented since the 16th century. In 1589, William Lee's invention of the stocking machine had caused a riot, noted by @hills1989william and reported by @fleming_2020. The book "The Luddites; Machine-Breaking in Regency England", authored by @thomis1972luddites published in 1972, notes the rise of Luddism. Luddism is a working-class movement asking technology to work with employees and not against them. A modern scripture "The Digital Divide" by @10.5555/762625.762640 has a unique perspective on this. Digital divide, which refers to the rift caused by lack of access to information across gender, race, age, among other demographic keys. @10.5555/762625.762640 also says that they see the gap narrowing now. @robinson2003new pushes findings by @10.5555/762625.762640 a bit further and also notices the bias of information. However, they don't account for future and future technology.
+
+This article by @smith_2019 states that 50% of Americans believe that Robots will replace innumerable jobs across the industry. An important point is that 80% believe that their jobs will be secure. It seems counterintuitive, but humans always find a more specialized role, and therefore is not surprising. @NBERw16082 also outlines the same observations. They observed a decline of low-skilled jobs, also raising differences between each level of workers. Computers are replacing jobs where cognitive skills and manual input are obligatory as said by @10.1162/003355303322552801. The author didn't break down the observations across different industrial sectors, where I will be observing the results. Authors also published another article @10.1162/003355398555874 where they note an increased skill level of an employee in computer-intense industries. This time the author only focused on technology-focused industries and missed out on observing the same trend across other industrial sectors, which is the focus of this research. Humans also fear "being left behind", says @1324077020030101, and will always try to cover the skills they offset. Illustrated by other papers on this article, we observe a decline in low-skill jobs that are labor-intensive jobs.
+
+# Literature Review
+@ABERNATHY1975379 observes the evolution of any process. A process that starts as simple logic; evolves into a complex one over time. This complex process generates inefficiencies, and the author points out that those machines are employed to bring back the lost inefficiencies. The author didn't account for how these trends are observed in different industrial sectors. Authors @10.1093/icc/dtr069 balances out the corporate perspective and speak for human evolution. As robots take on menial jobs, humans find a more specialized role. Those specialized roles spikes growth and knowledge. Similarly, @bainbridge1982ironies describes multiple ways in which automation can work in tandem with humans. Humans can take more managerial roles and let machines handle the rule-based task. 
+
+## Aviation
+At the time of writing, the airline industry is almost automated. Auto-pilot, take-off and landing assistance, navigation, other critical functions are all automated. We still see pilots in the cockpit making sure everything runs smoothly @STANTON199635. @2247952820120101 also talks about automation in aviation and also demonstrates that automation decreases responses time and risks. The authors don't dive much into the increasing reliance on technology and converting the human to a checker role. Checking what the robot does and correct it for any issues.
+
+## Transportation
+The transportation industry is moving towards automated driving systems. Waymo and Tesla are leading that, among others @13645118320190101. They are already saving lives and  The @10.1145/3411053 shows that the better the automated systems get, the fewer losses to human lives. The automated systems have already made ways in saving lives as noted by @schwall2020waymo. These papers, don't talk about what happens if there is an automated car caused an accident. Till driverless cars or self-driving vehicles become a mainstay @1336134720000101 proposes the development of an Adaptive Cruise Control system that helps reduce errors and accidents. A need for this cruise control arises because humans have an inherent tendency to make errors as they work on multiple tasks at a time. Having a dedicated machine would help in preventing the loss of lives. The paper doesn't talk about a merger of these technologies.
+
+## Manufacturing
+Of all the industries, the manufacturing industry has utilized robots and artificial intelligence the most. @jamsa2007future talks about how modern industries utilize automation to deliver a reliable product. They use machines anywhere from R&D to marketing the product. And how each industry utilizes robots. The chemical industry is the biggest one. The authors missed out on the extension of those robotic knowledge/skills to other industrial sectors.
+
+## Healthcare
+Automation is also taking its place in healthcare with machine learning and AI, outlined by @davenport2019potential. This article points out the advances ML and AI have brought to the field. Also points out how a bit value changes and misdiagnose. ML and AI are still evolving in this field and the author(s) believe they will have a major role to play as the models and data evolve. This paper is an overall approach to future possibilities, current use, current limitations, and also live results.
+
+## Agriculture
+@mahmud2020robotics enlighten us about how automation is used in agriculture. Agriculture at a point in history was the only job and now has a very small population engaged in it. Agriculture is probably the space where automation is heavily relied upon for a consistent output. Additionally, @sarangi2016automation demonstrates how automation is used to deal with crop diseases. @mohanraj2016field talks about how Internet-of-things can be used to yield a better crop with minimum wastage. A farmer wouldn't be able to monitor their farms without additional help. Internet Of Things could help in those cases and notify about any minor change in the field. Also, take measures to avoid harm to the crops. These articles are a good source for understanding how robots and humans can work towards achieving a consistent output and save time.
+
+## Future
+We are at such a place in the world, where we can deploy another robot to check, and validate the other one. @peleska1996test talk about setting a safety standing for reactive systems. Reactive systems kick in when they see an error and try to correct them. The authors proposed a system, when realized, acts as a check before kicking the reactive system of an automation response of a machine. Although, the authors missed the point of humans checking the robot's checked work. Making sure that there are no false positives and false negatives in the response. @daily2017self looks at how, when a machine is released in the real world would be affected by 3 things. 1. Government regulation, 2. Interference of historical perception to new technologies implementation and 3. Future. The author missed adding public acceptance of technology. There are a lot of unknowns but in the end, humans always accept machines as they are convenient and safe. @badue2021self tests out how each self-driving car's system operates and functions. All the functions they test were industry standard. Most of the functions of each machine were hidden from the authors but safety standards were always maintained as per their independent testing. \
+@7419800 suggests a hypothetical scenario for self-driving cars and a potential lawsuit. The authors leave an open-ended question after walking through each of the scenarios. The end goal of this exercise is to answer the question, who is to blame when technology is involved in an accident with humans. @strawn2016automation describes an open-ended question, to what happens when the future is completely automated. Will it cause a utopia or a dystopia. Proving sound arguments on both ends.
+
+## Hypothesis
+### Primary hypothesis
+Process automation in the finance industry will result in job losses
+The primary hypothesis will be an extrapolated result from the other hypothesis.
+
+### Hypothesis 1
+Automated Landing and Piloting systems in the aviation industry results in job loss.
+
+### Hypothesis 2
+Automated Landing and Piloting systems will raise human safety concerns.
+
+### Hypothesis 3
+Self-driving and Driverless cars will raise human safety concerns.
+
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup

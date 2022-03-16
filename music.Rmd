@@ -1,0 +1,148 @@
+---
+title             : "Automation In Daily Life"
+shorttitle        : "Automation"
+
+author: 
+  - name          : "Rushabh Barbhaya"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "326 Market St, Harrisburg, PA 17101"
+    email         : "RBarbhaya@my.harrisburgu.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Harrisburg University of Science and Technology"
+
+authornote: |
+  PlaceHolder
+
+abstract: |
+  PlaceHolder
+  
+keywords          : "Automation, Jobs, Aviation, Self Driving Cars, Engineering, Science, Production"
+wordcount         : "7"
+
+bibliography      : ["C:/Users/rhbar/Documents/ref.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+csl               : "C:/Users/rhbar/Documents/apa.csl"
+documentclass     : "apa7"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("C:/Users/rhbar/Documents/ref.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+
+# Introduction
+This paper will be a project to display how safety and automation promote each other. We also look at other arguemnts of job losses, a possible utopia or dystopia in the future, but the overall hypothesis will show compare tech evolution with death ratio (Per 1000 people)
+
+
+# DRAFT Lit Review and Introduction
+
+- The author of the article (@PaulKMcclure2018) observes a correlation in rise and mainstay of automated solutions with growing health concerns. The Author notes that, unemployment due to technology is leading to anxiety-related mental health issues
+
+- The book "The Luddites; Machine-Breaking in Regency England" (@thomis1972luddites) has been around since 1972 explaing the concept of Luddism. Luddism is a working class movement against the effects of capitalism. Luddites wanted technology in a way that works with them and not replace them.
+
+- author (@ABERNATHY1975379) explains how a simple process, by evolution, increases in complexity and therefore, increases inefficiencies. Having technology aid these process, returns those lost inefficiencies back to the model.
+
+- Author (@10.1093/icc/dtr069) balances out the output from a corporate perspective. The author suggests that as and when technology is introduced in the system. The existing workforce pick up the tech and specialize themselves. It leads to growth and expertise. (more pending)
+
+- website (@smith_2020) provides us a case study where how technology has enabled humans to secure a job. Which is in contrast with the article by (@PaulKMcclure2018)
+
+- The book "The Digital Divide" (@10.5555/762625.762640) also supports the work by (@smith_2020). The authors talk about how there was a divide among society. And how has technology removed that gap for equal opportunity.
+
+- An similar article on digital divide by  (@robinson2003new) shows there are signs of division across the spectrum. The more educated, politically stronger or person from wealth have better persived levels of success.
+
+- [Initial Candidate] This article by (@smith_2019) states that 50% of Americans believe that Robots will replace a lot of jobs across the industry. Also, an important point is that of them 80% believe that their job will be secured. Which shows that, even if robots catch up, humans will find a way to save; excel at their job.
+
+- Author (@NBERw16082) outline their research trend analysis between jobs and technology. The decline of low-skilled jobs, offshore transfer of critical roles, and raising difference between each level of workers [Results Pending]
+
+- Authors (@10.1162/003355303322552801) demonstrates with a decent accuracy that computer automation replaces only those sections which require cognitive skills and manual input. In most other senses it complements the workers in increasing efficiency and decreasing risk
+
+- The above authors also published an article on the skills upgrade level of jobs across the industry (@10.1162/003355398555874). The results from their research indicated that computer-intensive industries AKA Tech companies see a greater rate of skills upgrade as compared to the rest of the world.
+
+- The article by (@1324077020030101) demonstrates, how a fear driven workflow progresses. Humans who have that inherent feeling of "being left behind" try to cover of the skills they offset. This behaviour demonstrates the adaptability of humans.
+
+- @STANTON199635 explains that how aviation is mostly automated. Also, how automation can never be full proof and will always need a human to take over when needed.
+
+- (@10.1145/3411053) provides us with an insight on how automation can bring safety and uniformity in existing aviation systems
+
+- Automation is also taking its place in healthcare with machine learning and AI as outlined by (@davenport2019potential). This article points out the advances ML and AI have brought to the field. Also points out how a bit value change and misdiagnose. ML and AI are still evolving in this field and the author(s) believe it will have a major role to play as the models and data evolve
+
+- @mahmud2020robotics enlighten us about how automation is used in agriculture. Agriculture at a point in history was the only job and now has a very small population engaged in it. Agriculture is probably the space where automation is heavily relied upon for a consistent output.
+
+- To add to @mahmud2020robotics, @sarangi2016automation demonstrates how automation is used to deal with crop-diseases
+
+- Adding to previous mentions, @mohanraj2016field talks about how Internet-of-things can be used to yield a better crop with minimum wastage. A farmer wouldn't be able to monitor their farms without additional help. IOT could help in those cases and notify about any minor change in the field. Also, take measures to avoid harm to the crops
+
+- @1336134720000101 proposes a development of Adaptive Cruise Control system which helps reduce errors and accidents. A need for this cruise control arise because humans have an inherent tendency to make errors as they work on multiple tasks at a time. Having a dedicated machine would help in preventing loss of lives.
+
+- @king2009automation developed a robot for testing hypotheses which are a part of any scientific study. They were able to generate multiple function to save time for the scientific community and save collective time.
+
+- @bainbridge1982ironies describes multiple ways in which automation can work in tandem with humans. Human can take a more managerial role and let machines handle the rule based task.
+
+- @2247952820120101 also talks about automation in aviation and also demonstrates us that automation decreases responses time and risks.
+
+- @jamsa2007future talks about how modern industries utilize automation to deliver a reliable product. They use machines anywhere from R&D to marketing the product. And how each industries utilize robots. Chemical industry being the biggest one.
+
+- @pritschow1990automation talks about the open model of robots and machines infrastructure [Pending]
+
+- @toola1993safety quantifies the safety standard for automation. They talk about the duality of technology in safety, as they are categorized for causing distractions and also aiding in productivity. [pending 2nd reading]
+
+- @peleska1996test talk about setting a safety standing for reactive systems. Reactive system kick in when they see an error and try to correct them. Authors proposed system, when realized, acts a check before kicking the reactive system of a automation response of a machine. Making sure that there are no false positives and false negatives in the response.
+
+- @daily2017self looks at how, when an machine is released in the real world would be affected by 3 things. 1. Government regulation, 2. Interference of historical perception to new implementation and 3. Future. There are a lot of unknowns but in the end humans always accept machines as they are convenient and safe.
+
+- @badue2021self tests out how each self driving car's system operates and functions. All the functions they test were industry standard. Most of the function of each machine were hidden from the authors but safety standards were always maintained as per their independent testing
+
+- @7419800 suggest a hypothetical scenario for self driving cars and a potential lawsuit. Authors leave an open ended question after walking through each of the scenarios. The end goal of this excerise is to answer the question, who is to blame when technology is involved in an accident with human.
+
+- @strawn2016automation describe an open ended question, to what happens when future is completely automated. Will it cause a utopia or a dystopia. Proving sound arguments on both ends.
+
+- this project and all it's resources where developed, maintained and supported by @R-base
+
+# Hypothesis
+
+## Hypothesis 1
+$H0:$ Automation Saves Lives \
+$HA:$ Automation Does not save lives
+
+## Hypothesis 2
+$H0:$ Automation results in job losses \
+$HA:$ Automation does not result in job losses
+
+# Method
+
+# Validation
+
+# Results
+
+# Conclusion
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup

@@ -1,0 +1,390 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  english,
+  man]{apa7}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Automation In Daily Life},
+  pdfauthor={Rushabh Barbhaya1},
+  pdflang={en-EN},
+  pdfkeywords={Automation, Jobs, Aviation, Self Driving Cars, Engineering, Science, Production},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\centering\begin{threeparttable}}
+%   {\end{threeparttable}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\centering\begin{ThreePartTable}}{\end{ThreePartTable}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\HyOrg@maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+\shorttitle{Automation}
+\keywords{Automation, Jobs, Aviation, Self Driving Cars, Engineering, Science, Production\newline\indent Word count: 7}
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{csquotes}
+\ifxetex
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\else
+  \usepackage[main=english]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\title{Automation In Daily Life}
+\author{Rushabh Barbhaya\textsuperscript{1}}
+\date{}
+
+
+\authornote{
+
+PlaceHolder
+
+Correspondence concerning this article should be addressed to Rushabh Barbhaya, 326 Market St, Harrisburg, PA 17101. E-mail: \href{mailto:RBarbhaya@my.harrisburgu.edu}{\nolinkurl{RBarbhaya@my.harrisburgu.edu}}
+
+}
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Harrisburg University of Science and Technology}
+
+\abstract{
+PlaceHolder
+}
+
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+This paper will be a project to display how safety and automation promote each other. We also look at other arguemnts of job losses, a possible utopia or dystopia in the future, but the overall hypothesis will show compare tech evolution with death ratio (Per 1000 people)
+
+\hypertarget{draft-lit-review-and-introduction}{%
+\section{DRAFT Lit Review and Introduction}\label{draft-lit-review-and-introduction}}
+
+\begin{itemize}
+\item
+  The author of the article (McClure (2018)) observes a correlation in rise and mainstay of automated solutions with growing health concerns. The Author notes that, unemployment due to technology is leading to anxiety-related mental health issues
+\item
+  The book ``The Luddites; Machine-Breaking in Regency England'' (Thomis (1972)) has been around since 1972 explaing the concept of Luddism. Luddism is a working class movement against the effects of capitalism. Luddites wanted technology in a way that works with them and not replace them.
+\item
+  author (Abernathy and Townsend (1975)) explains how a simple process, by evolution, increases in complexity and therefore, increases inefficiencies. Having technology aid these process, returns those lost inefficiencies back to the model.
+\item
+  Author (Evangelista and Vezzani (2011)) balances out the output from a corporate perspective. The author suggests that as and when technology is introduced in the system. The existing workforce pick up the tech and specialize themselves. It leads to growth and expertise. (more pending)
+\item
+  website (Smith (2020)) provides us a case study where how technology has enabled humans to secure a job. Which is in contrast with the article by (McClure (2018))
+\item
+  The book ``The Digital Divide'' (Nie and Erbring (2001)) also supports the work by (Smith (2020)). The authors talk about how there was a divide among society. And how has technology removed that gap for equal opportunity.
+\item
+  An similar article on digital divide by (Robinson et al. (2003)) shows there are signs of division across the spectrum. The more educated, politically stronger or person from wealth have better persived levels of success.
+\item
+  {[}Initial Candidate{]} This article by (Smith (2019)) states that 50\% of Americans believe that Robots will replace a lot of jobs across the industry. Also, an important point is that of them 80\% believe that their job will be secured. Which shows that, even if robots catch up, humans will find a way to save; excel at their job.
+\item
+  Author (Acemoglu and Autor (2010)) outline their research trend analysis between jobs and technology. The decline of low-skilled jobs, offshore transfer of critical roles, and raising difference between each level of workers {[}Results Pending{]}
+\item
+  Authors (Autor et al. (2003)) demonstrates with a decent accuracy that computer automation replaces only those sections which require cognitive skills and manual input. In most other senses it complements the workers in increasing efficiency and decreasing risk
+\item
+  The above authors also published an article on the skills upgrade level of jobs across the industry (Autor et al. (1998)). The results from their research indicated that computer-intensive industries AKA Tech companies see a greater rate of skills upgrade as compared to the rest of the world.
+\item
+  The article by (Wu Song (2003)) demonstrates, how a fear driven workflow progresses. Humans who have that inherent feeling of ``being left behind'' try to cover of the skills they offset. This behaviour demonstrates the adaptability of humans.
+\item
+  Stanton and Marsden (1996) explains that how aviation is mostly automated. Also, how automation can never be full proof and will always need a human to take over when needed.
+\item
+  (Lala et al. (2020)) provides us with an insight on how automation can bring safety and uniformity in existing aviation systems
+\item
+  Automation is also taking its place in healthcare with machine learning and AI as outlined by (Davenport and Kalakota (2019)). This article points out the advances ML and AI have brought to the field. Also points out how a bit value change and misdiagnose. ML and AI are still evolving in this field and the author(s) believe it will have a major role to play as the models and data evolve
+\item
+  Mahmud et al. (2020) enlighten us about how automation is used in agriculture. Agriculture at a point in history was the only job and now has a very small population engaged in it. Agriculture is probably the space where automation is heavily relied upon for a consistent output.
+\item
+  To add to Mahmud et al. (2020), Sarangi et al. (2016) demonstrates how automation is used to deal with crop-diseases
+\item
+  Adding to previous mentions, Mohanraj et al. (2016) talks about how Internet-of-things can be used to yield a better crop with minimum wastage. A farmer wouldn't be able to monitor their farms without additional help. IOT could help in those cases and notify about any minor change in the field. Also, take measures to avoid harm to the crops
+\item
+  Ward (2000) proposes a development of Adaptive Cruise Control system which helps reduce errors and accidents. A need for this cruise control arise because humans have an inherent tendency to make errors as they work on multiple tasks at a time. Having a dedicated machine would help in preventing loss of lives.
+\item
+  King et al. (2009) developed a robot for testing hypotheses which are a part of any scientific study. They were able to generate multiple function to save time for the scientific community and save collective time.
+\item
+  Bainbridge (1982) describes multiple ways in which automation can work in tandem with humans. Human can take a more managerial role and let machines handle the rule based task.
+\item
+  Berberian et al. (2012) also talks about automation in aviation and also demonstrates us that automation decreases responses time and risks.
+\item
+  Jämsä-Jounela (2007) talks about how modern industries utilize automation to deliver a reliable product. They use machines anywhere from R\&D to marketing the product. And how each industries utilize robots. Chemical industry being the biggest one.
+\item
+  Pritschow (1990) talks about the open model of robots and machines infrastructure {[}Pending{]}
+\item
+  Toola (1993) quantifies the safety standard for automation. They talk about the duality of technology in safety, as they are categorized for causing distractions and also aiding in productivity. {[}pending 2nd reading{]}
+\item
+  Peleska and Siegel (1996) talk about setting a safety standing for reactive systems. Reactive system kick in when they see an error and try to correct them. Authors proposed system, when realized, acts a check before kicking the reactive system of a automation response of a machine. Making sure that there are no false positives and false negatives in the response.
+\item
+  Daily et al. (2017) looks at how, when an machine is released in the real world would be affected by 3 things. 1. Government regulation, 2. Interference of historical perception to new implementation and 3. Future. There are a lot of unknowns but in the end humans always accept machines as they are convenient and safe.
+\item
+  Badue et al. (2021) tests out how each self driving car's system operates and functions. All the functions they test were industry standard. Most of the function of each machine were hidden from the authors but safety standards were always maintained as per their independent testing
+\item
+  Greenblatt (2016) suggest a hypothetical scenario for self driving cars and a potential lawsuit. Authors leave an open ended question after walking through each of the scenarios. The end goal of this excerise is to answer the question, who is to blame when technology is involved in an accident with human.
+\item
+  Strawn (2016) describe an open ended question, to what happens when future is completely automated. Will it cause a utopia or a dystopia. Proving sound arguments on both ends.
+\item
+  this project and all it's resources where developed, maintained and supported by R Core Team (2021)
+\end{itemize}
+
+\hypertarget{hypothesis}{%
+\section{Hypothesis}\label{hypothesis}}
+
+\hypertarget{hypothesis-1}{%
+\subsection{Hypothesis 1}\label{hypothesis-1}}
+
+\(H0:\) Automation Saves Lives\\
+\(HA:\) Automation Does not save lives
+
+\hypertarget{hypothesis-2}{%
+\subsection{Hypothesis 2}\label{hypothesis-2}}
+
+\(H0:\) Automation results in job losses\\
+\(HA:\) Automation does not result in job losses
+
+\hypertarget{method}{%
+\section{Method}\label{method}}
+
+\hypertarget{validation}{%
+\section{Validation}\label{validation}}
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-ABERNATHY1975379}{}%
+Abernathy, W. J., \& Townsend, P. L. (1975). Technology, productivity and process change. \emph{Technological Forecasting and Social Change}, \emph{7}(4), 379--396. https://doi.org/\url{https://doi.org/10.1016/0040-1625(75)90015-3}
+
+\leavevmode\hypertarget{ref-NBERw16082}{}%
+Acemoglu, D., \& Autor, D. (2010). \emph{Skills, tasks and technologies: Implications for employment and earnings} (Working Paper No. 16082; Working Paper Series). National Bureau of Economic Research. \url{https://doi.org/10.3386/w16082}
+
+\leavevmode\hypertarget{ref-10.1162ux2f003355398555874}{}%
+Autor, D. H., Katz, L. F., \& Krueger, A. B. (1998). {Computing Inequality: Have Computers Changed the Labor Market?*}. \emph{The Quarterly Journal of Economics}, \emph{113}(4), 1169--1213. \url{https://doi.org/10.1162/003355398555874}
+
+\leavevmode\hypertarget{ref-10.1162ux2f003355303322552801}{}%
+Autor, D. H., Levy, F., \& Murnane, R. J. (2003). {The Skill Content of Recent Technological Change: An Empirical Exploration*}. \emph{The Quarterly Journal of Economics}, \emph{118}(4), 1279--1333. \url{https://doi.org/10.1162/003355303322552801}
+
+\leavevmode\hypertarget{ref-badue2021self}{}%
+Badue, C., Guidolini, R., Carneiro, R. V., Azevedo, P., Cardoso, V. B., Forechi, A., Jesus, L., Berriel, R., Paixao, T. M., Mutz, F., \& others. (2021). Self-driving cars: A survey. \emph{Expert Systems with Applications}, \emph{165}, 113816.
+
+\leavevmode\hypertarget{ref-bainbridge1982ironies}{}%
+Bainbridge, L. (1982). Ironies of automation. \emph{IFAC Proceedings Volumes}, \emph{15}(6), 129--135.
+
+\leavevmode\hypertarget{ref-2247952820120101}{}%
+Berberian, B., Sarrazin, J.-C., Le Blaye, P., \& Haggard, P. (2012). Automation technology and sense of control: A window on human agency. \emph{PloS One}, \emph{7}(3), e34075. \url{https://search.ebscohost.com/login.aspx?direct=true\&AuthType=sso\&db=mdc\&AN=22479528\&site=ehost-live\&scope=site\&custid=s4786267}
+
+\leavevmode\hypertarget{ref-daily2017self}{}%
+Daily, M., Medasani, S., Behringer, R., \& Trivedi, M. (2017). Self-driving cars. \emph{Computer}, \emph{50}(12), 18--23.
+
+\leavevmode\hypertarget{ref-davenport2019potential}{}%
+Davenport, T., \& Kalakota, R. (2019). The potential for artificial intelligence in healthcare. \emph{Future Healthcare Journal}, \emph{6}(2), 94.
+
+\leavevmode\hypertarget{ref-10.1093ux2ficcux2fdtr069}{}%
+Evangelista, R., \& Vezzani, A. (2011). {The impact of technological and organizational innovations on employment in European firms}. \emph{Industrial and Corporate Change}, \emph{21}(4), 871--899. \url{https://doi.org/10.1093/icc/dtr069}
+
+\leavevmode\hypertarget{ref-7419800}{}%
+Greenblatt, N. A. (2016). Self-driving cars and the law. \emph{IEEE Spectrum}, \emph{53}(2), 46--51. \url{https://doi.org/10.1109/MSPEC.2016.7419800}
+
+\leavevmode\hypertarget{ref-jamsa2007future}{}%
+Jämsä-Jounela, S.-L. (2007). Future trends in process automation. \emph{Annual Reviews in Control}, \emph{31}(2), 211--220.
+
+\leavevmode\hypertarget{ref-king2009automation}{}%
+King, R. D., Rowland, J., Oliver, S. G., Young, M., Aubrey, W., Byrne, E., Liakata, M., Markham, M., Pir, P., Soldatova, L. N., \& others. (2009). The automation of science. \emph{Science}, \emph{324}(5923), 85--89.
+
+\leavevmode\hypertarget{ref-10.1145ux2f3411053}{}%
+Lala, J. H., Landwehr, C. E., \& Meyer, J. F. (2020). Autonomous vehicle safety: Lessons from aviation. \emph{Commun. ACM}, \emph{63}(9), 28--31. \url{https://doi.org/10.1145/3411053}
+
+\leavevmode\hypertarget{ref-mahmud2020robotics}{}%
+Mahmud, M. S. A., Abidin, M. S. Z., Emmanuel, A. A., \& Hasan, H. S. (2020). Robotics and automation in agriculture: Present and future applications. \emph{Applications of Modelling and Simulation}, \emph{4}, 130--140.
+
+\leavevmode\hypertarget{ref-PaulKMcclure2018}{}%
+McClure, P. K. (2018). {``You're fired,''} says the robot: The rise of automation in the workplace, technophobes, and fears of unemployment. \emph{Social Science Computer Review}, \emph{36}(2), 139--156. \url{https://doi.org/10.1177/0894439317698637}
+
+\leavevmode\hypertarget{ref-mohanraj2016field}{}%
+Mohanraj, I., Ashokumar, K., \& Naren, J. (2016). Field monitoring and automation using IOT in agriculture domain. \emph{Procedia Computer Science}, \emph{93}, 931--939.
+
+\leavevmode\hypertarget{ref-10.5555ux2f762625.762640}{}%
+Nie, N. H., \& Erbring, L. (2001). Internet and society: A preliminary report. In \emph{The digital divide: Facing a crisis or creating a myth?} (pp. 269--271). MIT Press.
+
+\leavevmode\hypertarget{ref-peleska1996test}{}%
+Peleska, J., \& Siegel, M. (1996). \emph{Test automation of safety-critical reactive systems}.
+
+\leavevmode\hypertarget{ref-pritschow1990automation}{}%
+Pritschow, G. (1990). Automation technology---on the way to an open system architecture. \emph{Robotics and Computer-Integrated Manufacturing}, \emph{7}(1-2), 103--111.
+
+\leavevmode\hypertarget{ref-R-base}{}%
+R Core Team. (2021). \emph{R: A language and environment for statistical computing}. R Foundation for Statistical Computing. \url{https://www.R-project.org/}
+
+\leavevmode\hypertarget{ref-robinson2003new}{}%
+Robinson, J. P., DiMaggio, P., \& Hargittai, E. (2003). New social survey perspectives on the digital divide. \emph{It \& Society}, \emph{1}(5), 1--22.
+
+\leavevmode\hypertarget{ref-sarangi2016automation}{}%
+Sarangi, S., Umadikar, J., \& Kar, S. (2016). Automation of agriculture support systems using wisekar: Case study of a crop-disease advisory service. \emph{Computers and Electronics in Agriculture}, \emph{122}, 200--210.
+
+\leavevmode\hypertarget{ref-smith_2020}{}%
+Smith, A. (2020). Methodology. In \emph{Pew Research Center: Internet, Science \& Tech}. Pew Research Center. \url{https://www.pewresearch.org/internet/2015/11/19/methodology-179/}
+
+\leavevmode\hypertarget{ref-smith_2019}{}%
+Smith, A. (2019). \emph{Methodology}. \url{https://www.pewresearch.org/internet/2016/03/10/future-of-workforce-automation-methodology/}
+
+\leavevmode\hypertarget{ref-STANTON199635}{}%
+Stanton, N. A., \& Marsden, P. (1996). From fly-by-wire to drive-by-wire: Safety implications of automation in vehicles. \emph{Safety Science}, \emph{24}(1), 35--49. https://doi.org/\url{https://doi.org/10.1016/S0925-7535(96)00067-7}
+
+\leavevmode\hypertarget{ref-strawn2016automation}{}%
+Strawn, G. (2016). Automation and future unemployment. \emph{IT Professional}, \emph{18}(1), 62--64.
+
+\leavevmode\hypertarget{ref-thomis1972luddites}{}%
+Thomis, M. I. (1972). \emph{The luddites; machine-breaking in regency england}. Schocken Books Incorporated.
+
+\leavevmode\hypertarget{ref-toola1993safety}{}%
+Toola, A. (1993). The safety of process automation. \emph{Automatica}, \emph{29}(2), 541--548.
+
+\leavevmode\hypertarget{ref-1336134720000101}{}%
+Ward, N. J. (2000). Automation of task processes: An example of intelligent transportation systems. \emph{Human Factors \& Ergonomics in Manufacturing}, \emph{10}(4), 395--408. \url{https://search.ebscohost.com/login.aspx?direct=true\&AuthType=sso\&db=asn\&AN=13361347\&site=ehost-live\&scope=site\&custid=s4786267}
+
+\leavevmode\hypertarget{ref-1324077020030101}{}%
+Wu Song, F. (2003). Being left behind: The discourse of fear in technological change. \emph{Hedgehog Review}, \emph{5}(3), 26--42. \url{https://search.ebscohost.com/login.aspx?direct=true\&AuthType=sso\&db=hus\&AN=13240770\&site=ehost-live\&scope=site\&custid=s4786267}
+
+\end{CSLReferences}
+
+\endgroup
+
+
+\end{document}
