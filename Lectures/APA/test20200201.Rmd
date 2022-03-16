@@ -1,0 +1,86 @@
+---
+title             : "High Performance Computing in the Cloud, a Sample Annotated Bibliography"
+shorttitle        : "Sample Annotated Bibliography"
+
+author: 
+  - name          : "Arnie Miles"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Harrisburg University"
+    email         : "amiles@harrisburgu.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Harrisburg University of Science and Technology"
+
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
+
+
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+Your Annotated Bibliography, and your Literature Review (later) will start with an introductory paragraph. This paragraph should tell the reader what to expect from your study. You should not reveal your hypotheses yet, however, that should be saved for the end of the Annotated Bibliography (or Literature Review later). Be sure to remove anything from this document that isn're relevant to this document.
+
+# Annotated Bibliography
+According to @thain2005distributed, write a paragraph of stuff about this article. Each summary should be between a sentence and a couple of paragraphs that helps support your arguments. The first summary should be general in nature, and subsequent summaries should lead your reader through more and more specific points until you lead your reader to your hypotheses.
+
+@foster2008cloud wrote a lot about grid computing. This paragraph is an example of using an inline citation at the beginning of a paragraph summary. Once again, each summary should be in order. 
+
+## Sub-headers are allowed
+
+If it makes sense to do so, feel free to put in sub-headers to help your reader understand sub-sets of your literature. Be sure, however, that inside each sub-header you are working from general to specific, and be sure to tie everything together later.
+
+APA discourages the use of direct quotes, but when you do need to use on, you would write something like @yu2005taxonomy [p. 25] said "Direct quote goes here." Again, APA only wants to see direct quotes when the exact wording of the original quote is important to the meaning. You could also write "This is a direct quote." [@yu2005taxonomy p. 25]
+
+Mix up citation styles. For example, you could write an entire summary and end the summary with a citation. This paragraph is an example of what I'm talking about. This entire paragraph is an example. Imagine that this paragraph is your paraphrased text. [@buyya2002economic]
+
+
+Don't forget that this summary should contain approximately 30 citations. @hamscher2000evaluation said (no, they didn't, but this is an example) that an annotated bibliography should contain enough material that you can throw articles away later that feel weak and unrelated to you later. 
+
+Notices that the References section is not in the same order as they references are listed in this annotated bibliography. Papaja will automatically put your references in alphabetical order for you! [@erwin2001unicore]
+
+This all ends with a paragraph containing your hypotheses. They do not get their own header. You should put them in paragraph form, try to avoid bullet lists unless you are writing varients of the same hypothesis. Be sure that your literature leads your reader to your hypotheses. Remember that your reader doesn't need to agree with your hyptheses, but they must know how you arrived at them. 
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
